@@ -1,0 +1,2431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="sEp6zSMAfgWN7Vphqz58mWCaAtY4ZFxufJTXU9j2">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="custome.css">  
+
+    <!-- toastr -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> 
+
+
+    <title>Guru-SMKN 1 BINANGUN</title>
+  <style type="text/css">
+    iframe, object, embed {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  </style>
+
+  </head>
+  <body>
+
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0d47a1">
+        <div class="container">            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuWeb" aria-controls="menuWeb" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><h3>SMKN 1 BINANGUN</h3></a>
+            <div class="collapse navbar-collapse justify-content-end" id="menuWeb">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="dropprofile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropprofile">
+                        <a class="dropdown-item" href="profile.html">Tentang Kami</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="visimisi.html">Visi & Misi</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="guru.html">Guru</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="tatausaha.html">TU</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropkesiswaan" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kesiswaaan
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropkesiswaan">
+                        <a class="dropdown-item" href="siswa.html">Siswa</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="prestasi.html">Prestasi</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="ekstra.html">Ekstrakurikuler</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="dropgalleri" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Gallery
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropgalleri">
+                        <a class="dropdown-item" href="galleri.html">Kegiatan Sekolah</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="fasilitas.html">Fasilitas Sekolah</a> 
+                    </li>           
+                    <!-- <a class="nav-link" href="contact.html">Contact</a>             -->
+                    <a class="nav-link" href="alumni.html">Alumni</a> 
+                    <a class="nav-link" href="absenonline.html">Absen</a> 
+                    <a class="nav-link" href="tanyappdb.html">QA PPDB</a>  
+                    <!-- <a class="nav-link" href="login">Sign in</a>             -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="droplks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        LKS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="droplks">
+                        <a class="dropdown-item" href="lkstkroCilacap">TKRO</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="lkstpCilacap">Pemesinan</a>
+                        </div>
+                    </li> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   <style type="text/css">
+#mobile{
+  display: none;
+}
+
+@media  only screen and (max-width: 600px) {
+  #web{
+    display: none;
+  }
+  #mobile{
+    display: block;
+  }
+}
+  
+</style>
+
+<div class="container pt-5"></div>
+<div class="p-3 mt-3 ">
+  <div class="container">
+  <div id="web">
+
+    <div class="card">    
+      <div class="card-body">
+        <h3 class="card-title">Daftar Pendidik</h3>
+
+        <div class="row">
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Sri Utami, S.Pd, M.M</strong></li>
+                    <li class="list-group-item">19750202 200003 2 005</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">null</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Drs. Sri Hartono,Mm.Pd</strong></li>
+                    <li class="list-group-item">19660501 199802 1 003</li>
+                    <li class="list-group-item">PKn</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Ninuk Setyawati, S.Pd</strong></li>
+                    <li class="list-group-item">19630730 200701 2 003</li>
+                    <li class="list-group-item">Bahasa Indonesia</li>
+                    <li class="list-group-item">Wali Kelas XII MM 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Yuswinarti, S.Pd</strong></li>
+                    <li class="list-group-item">19700103 200801 2 015</li>
+                    <li class="list-group-item">PKK</li>
+                    <li class="list-group-item">Wali Kelas XI TKR 4</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=19d3rwB0cu8SlIm2DauPkYrqIMJV6I7qC" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Muhyani, S.Pd</strong></li>
+                    <li class="list-group-item">19700722 200801 1 004</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Nircahyo Suko Widodo, S.Pd</strong></li>
+                    <li class="list-group-item">19721116 200604 1 005</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">null</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1_LoZ0Wbakbe2smhVZDQNah81_fEMudkd" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Muji Sumarni, S.Pd</strong></li>
+                    <li class="list-group-item">19750729 200701 2 009</li>
+                    <li class="list-group-item">Bahasa Inggris</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=15MqSLwjAfVR72vno1AILPMkDaQBrtxdi" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Endang Sri Lestari, S.Kom</strong></li>
+                    <li class="list-group-item">19760417 201001 2 009</li>
+                    <li class="list-group-item">Produktif MM</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1EFPRJQjEW3FXUocTJXNtTKgBqca1Ehk6" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Junedi Haryanto, S.Kom</strong></li>
+                    <li class="list-group-item">19760609 201001 1 013</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Sri Maria Yuniati, S.Pd</strong></li>
+                    <li class="list-group-item">19770607 200801 2 016</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1M6DxfdLwWdyR7kzG4Ncb-OMMljSXVNt8" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Christin Sumarno, S.Pd</strong></li>
+                    <li class="list-group-item">19800921 200903 2 006</li>
+                    <li class="list-group-item">IPAS</li>
+                    <li class="list-group-item">Wali Kelas X TKJ 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Novie Herawati, S.Kom</strong></li>
+                    <li class="list-group-item">19841107 201001 2 026</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">Wali Kelas XI TKJ 5</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=19vy6_Oh_90bC5DogczUbGiinkYzKBMRK" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Drs. Hadi Waluyo</strong></li>
+                    <li class="list-group-item">19640525 200801 1 004</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1zycYyV-sK49yWQ3wDXNIG5k1ow5UxENI" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Dariyah, S.Pd</strong></li>
+                    <li class="list-group-item">19781016 200604 2 006</li>
+                    <li class="list-group-item">Matematika</li>
+                    <li class="list-group-item">Wali Kelas XII TKR 5</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Totok Suriyanto, S.Pd</strong></li>
+                    <li class="list-group-item">19690413 200903 1 002</li>
+                    <li class="list-group-item">BP/BK</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Suryawan Widi Hartono, S.Pd</strong></li>
+                    <li class="list-group-item">19740120 200903 1 002</li>
+                    <li class="list-group-item">PJOK</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1TN6u9kbrmE8w3LIL_svJ4GI2BvRoQ8PX" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Edi Arbinto, S.Pd</strong></li>
+                    <li class="list-group-item">19740412 200903 1 004</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>P.Suryati, S.Pd</strong></li>
+                    <li class="list-group-item">19740714 200710 2 001</li>
+                    <li class="list-group-item">PAI</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1RA2M8vG9bWsoTSLh64fd93rctHLqjasY" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Askini Khairunnisa, S.Pd.I, M.Pd</strong></li>
+                    <li class="list-group-item">19800717 201001 2 017</li>
+                    <li class="list-group-item">PAI</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Puji Hartiti, S.Pd</strong></li>
+                    <li class="list-group-item">19830319 201001 2 021</li>
+                    <li class="list-group-item">Bahasa Inggris</li>
+                    <li class="list-group-item">Wali Kelas XII TKJ 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1TfAjlZcQHe5Vlxa0WiHEpgECicWWLof9" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Mugi Lestari, S.Pd</strong></li>
+                    <li class="list-group-item">19871002 201101 2 007</li>
+                    <li class="list-group-item">IPAS</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Praja Achsani Winasmadi, S.Pd</strong></li>
+                    <li class="list-group-item">19860528 201402 1 002</li>
+                    <li class="list-group-item">Matematika</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Berkah Destri Puspitasari, S.Pd</strong></li>
+                    <li class="list-group-item">19921212 202012 2 008</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Mery Sumiati, S.Pd</strong></li>
+                    <li class="list-group-item">19940307 202012 2 015</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Rasiman, S.Pd</strong></li>
+                    <li class="list-group-item">19670509 202221 1 001</li>
+                    <li class="list-group-item">PKn</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Budi Sudarmono, ST</strong></li>
+                    <li class="list-group-item">19720318 202221 1 002</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">Wali Kelas XII TKR 5</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Mohamad Ahwan, S.Pd</strong></li>
+                    <li class="list-group-item">19731208 202221 1 004</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Tri Sumarni, S.Pd</strong></li>
+                    <li class="list-group-item">19750119 202221 2 003</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Puji Wahyono, S.Kom</strong></li>
+                    <li class="list-group-item">19760123 202221 1 001</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Wali Kelas XII TKJ 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Sukasna, S.Pd</strong></li>
+                    <li class="list-group-item">19770407 202221 1 003</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Tofan Budi Ariyanto,S.Kom</strong></li>
+                    <li class="list-group-item">19800218 202221 1 005</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">Wali Kelas XII TKJ 4</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Suhartono, S.Kom</strong></li>
+                    <li class="list-group-item">19810424 202221 1 007</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1BltRG8GkOm1khvf2RLTay8ujuWnKiOp3" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Amik Rosasi, S.Kom</strong></li>
+                    <li class="list-group-item">19810717 202221 2 020</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">Wali Kelas XI TKJ 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Tri Nastiti, S.Kom</strong></li>
+                    <li class="list-group-item">19820423 202221 2 019</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">Wali Kelas XII TKJ 5</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Yayan Aminudin, S.Kom</strong></li>
+                    <li class="list-group-item">19820720 202221 1 009</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1JYt-QogdUoyVtpTca8bLmHtWup3ugJGn" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Sukarno, S.Pd.Si.Gr</strong></li>
+                    <li class="list-group-item">19830124 202221 1 002</li>
+                    <li class="list-group-item">IPAS</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Yuli Widayanti, S.Pd</strong></li>
+                    <li class="list-group-item">19830702 202221 2 012</li>
+                    <li class="list-group-item">Bahasa Inggris</li>
+                    <li class="list-group-item">Wali Kelas X ANIM 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Prihatno Sugeng N, S.Kom</strong></li>
+                    <li class="list-group-item">19831229 202221 1 006</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item"></li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Retno Budi Utami, S.Pd</strong></li>
+                    <li class="list-group-item">19840820 202221 2 026</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Wali Kelas XI MM 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>R. Priyoadi Kusmono, S.Pd</strong></li>
+                    <li class="list-group-item">19851101 202221 1 013</li>
+                    <li class="list-group-item">Matematika</li>
+                    <li class="list-group-item">Wali Kelas X TKR 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1CgaSJcmhIiTAsT8vBbVy0N-nbm-d94Ps" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Fitrotul Hikmah, S.Pd</strong></li>
+                    <li class="list-group-item">19860205 202221 2 016</li>
+                    <li class="list-group-item">IPAS</li>
+                    <li class="list-group-item">Wali Kelas X TP 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Johan Cahyadi, S.Pd</strong></li>
+                    <li class="list-group-item">19860602 202221 1 009</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">Wali Kelas X TKR 3</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Syaein, S.Pd</strong></li>
+                    <li class="list-group-item">19870303 202221 1 008</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1WHMGqqYs7dDOqnyNWraZQBdJPpmAP0U-" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Harnita Dwi Afriyanti, S.Pd.Si</strong></li>
+                    <li class="list-group-item">19870404 202221 2 010</li>
+                    <li class="list-group-item">Matematika</li>
+                    <li class="list-group-item">Wali Kelas XI TKR 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1ui2ioROQYKwIWKQb-0sqrMZnfHAGl38h" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Heri Purnawan, S.Pd.Gr.</strong></li>
+                    <li class="list-group-item">19870612 202221 1 005</li>
+                    <li class="list-group-item">BP/BK</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1lgTxKFpP7NA7aL6pu9ojEkI-qdlyW5Du" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Hendrik Novtiana Widiyantoro, S.Pd.Gr.</strong></li>
+                    <li class="list-group-item">19871129 202221 1 002</li>
+                    <li class="list-group-item">PJOK</li>
+                    <li class="list-group-item">Wali Kelas X TKR 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1TQpCoZZvfmXadSn284Vv8KX54McVacXI" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Fitriani, S.Pd</strong></li>
+                    <li class="list-group-item">19880518 202221 2 007</li>
+                    <li class="list-group-item">Bahasa Indonesia</li>
+                    <li class="list-group-item">Wali Kelas XII TKR 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Retnaning Sekarini, S.Pd</strong></li>
+                    <li class="list-group-item">1988052 2202221 2 015</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1w0jpB69vpIiXZwa3C1f0xYI-J62G48GQ" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Lukman Rian Affandi, S,Pd</strong></li>
+                    <li class="list-group-item">19890410 202221 1 011</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">Wali Kelas XII TKJ 3</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1DHlUI5m6GQGh8HASTHEImP_ZsjWejXpe" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Slamet Rusdiyanto, S.Pd</strong></li>
+                    <li class="list-group-item">19890413 202221 1 010</li>
+                    <li class="list-group-item">Bahasa Inggris</li>
+                    <li class="list-group-item">Wali Kelas XII TKR 6</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Anjar Kustantoro, S.Pd</strong></li>
+                    <li class="list-group-item">19891026 202221 1 004</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Wali Kelas XI TKR 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=15N9hxNnzmWyvmXfeFzxxxaf-drsbcncY" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Ilyas Ramdani, S.Pd.Gr.</strong></li>
+                    <li class="list-group-item">19900402 202221 1 005</li>
+                    <li class="list-group-item">Matematika</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Emi Sukriani, S.Pd</strong></li>
+                    <li class="list-group-item">19900621 202221 2 014</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Muslimin, S.Pd</strong></li>
+                    <li class="list-group-item">19901126 202221 1 005</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Wali Kelas XI TKR 5</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>M Shobri, S.Pd</strong></li>
+                    <li class="list-group-item">19911229 202221 1 004</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Meiariani Sintia Dewi, S.Pd</strong></li>
+                    <li class="list-group-item">19920503 202221 2 012</li>
+                    <li class="list-group-item">Sejarah</li>
+                    <li class="list-group-item">Wali Kelas XI TKJ 3</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Meli Triyani, S.Pd</strong></li>
+                    <li class="list-group-item">19930322 202221 2 017</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">Wali Kelas X TKJ 4</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=18HabmdnM4LhuSBNrC9AcAiqbD6h-R2iB" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Bimo Rahman Prasetyo, S.Kom</strong></li>
+                    <li class="list-group-item">19930614 202221 1 010</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">Wali Kelas XI TKJ 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Yuny Widiarti Putri, S.Pd</strong></li>
+                    <li class="list-group-item">19930628 202221 2 013</li>
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1-6SW4FVbMVoBXEX431KnhDXnM61Wqn4V" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Fikri Ikhtiyaarullah, S.Kom</strong></li>
+                    <li class="list-group-item">19930801 202221 1 002</li>
+                    <li class="list-group-item">MULTIMEDIA</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1h6yiOEuUch0tuT24HuW9RGN_ZpHLDsAJ" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Inne Agustine Dwi Hastuti, S.Pd</strong></li>
+                    <li class="list-group-item">19930828 202221 2 011</li>
+                    <li class="list-group-item">Bahasa Jawa</li>
+                    <li class="list-group-item">Wali Kelas XI TKJ 4</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Silvia Wahyu Palupi, S.Pd</strong></li>
+                    <li class="list-group-item">19931001 202221 2 013</li>
+                    <li class="list-group-item">Produktif TKJ</li>
+                    <li class="list-group-item">Wali Kelas X TKJ 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Nendi Gusnianto, S.Pd</strong></li>
+                    <li class="list-group-item">19940801 202221 1 011</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">Wali Kelas X TKR 5</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Anggita Senja Ilhami, S.Pd</strong></li>
+                    <li class="list-group-item">19941117 202221 1 005</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">Wali Kelas X TKR 6</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Unik Nurul Asmi, S.Pd</strong></li>
+                    <li class="list-group-item">19950309 202221 2 007</li>
+                    <li class="list-group-item">Sejarah</li>
+                    <li class="list-group-item">Wali Kelas XI TP 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Zulfi Nur Hanifatulloh, S.Pd</strong></li>
+                    <li class="list-group-item">19950515 202221 1 008</li>
+                    <li class="list-group-item">Produktif TP</li>
+                    <li class="list-group-item">Wali Kelas XI TP 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Nanda Akbar Rastiana, S.Pd</strong></li>
+                    <li class="list-group-item">19950528 202221 1 006</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1LJJ2ryVMN4kOl_y6BJTDrusWV76BdsH4" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Septian Nugroho, S.Pd</strong></li>
+                    <li class="list-group-item">19950915 202221 1 005</li>
+                    <li class="list-group-item">Produktif MM</li>
+                    <li class="list-group-item">Wali Kelas XI MM 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Munawir Syafii, S.Pd.I</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">PAI</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Supeni, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Bahasa Jawa</li>
+                    <li class="list-group-item">Wali Kelas X ANIM 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Reny Widyarti, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Matematika</li>
+                    <li class="list-group-item">Wali Kelas XII TP 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Mujiarto, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Produktif TKR</li>
+                    <li class="list-group-item">Wali Kelas X TKR 6</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1zhEkahdy-OGZUlG2Sqyhwr0joG00PCfo" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Ary Kusmawati, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">PKn</li>
+                    <li class="list-group-item">Wali Kelas XII TP 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1ngN5knJDZkYeauOZeYOQ8SyRHWEgL2QS" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Lilis Sutiyani Rahayu, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">BP/BK</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Rafnida Octaviani, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Produktif TP</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Novita Felicia, S.Pd.Kom </strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Produktif MM</li>
+                    <li class="list-group-item">Wali Kelas XII MM 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1zpjr4c1lcsrQDJBtYo_cjWliVlrwuU5H" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Gestiana Siwi Purwanti, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Bahasa Indonesia</li>
+                    <li class="list-group-item">Wali Kelas X TP 2</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1tgP4-YFC-pv-s2CRNsP-UFZhsQL5gvo1" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Luqman Hafidh Muiz, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Bahasa Inggris</li>
+                    <li class="list-group-item">Wali Kelas X TKR 4</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Nur Oktaviana Ningrum, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">PJOK</li>
+                    <li class="list-group-item">Wali Kelas X TKJ 3</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=12fN7__eOAc3WKHneiQJ8qUrT2zuzE0MV" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Peni Werdhi Elmina, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Produktif TP</li>
+                    <li class="list-group-item">-</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Purbo Dwi Siswanto, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">Bahasa Inggris</li>
+                    <li class="list-group-item">Wali Kelas XI TKR 3</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=1DunLX5dBSqMLOpi2sa9uDxIlSPMMaNNb" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Desi Kriswahyuni, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">BAHASA INDONESIA</li>
+                    <li class="list-group-item">Wali Kelas X TKJ 5</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Rizki Kurniawan, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">BAHASA JAWA</li>
+                    <li class="list-group-item">Wali Kelas XII TKR 3</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                      <!-- @$foto = $dg->NOHP; -->
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <figure>
+                              <img src="http://drive.google.com/uc?export=view&id=" class="img-thumbnail grayscale" width="85px" height="110px">
+                              
+                <figcaption>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Zaenul Maruf, S.Pd</strong></li>
+                    <li class="list-group-item">-</li>
+                    <li class="list-group-item">PAI</li>
+                    <li class="list-group-item">Wali Kelas XII TKR 1</li>
+                  </ul>
+                </figcaption>
+              </figure>
+            </div>
+                  </div> 
+
+      </div>
+    </div>
+
+    </div>
+  </div><!-- akhir container -->
+<div id="mobile">
+
+  <div class="card text-danger text-center" style="background-color: #0d47a1">    
+    <div class="card-body">
+      <h3 class="card-title">Daftar Pendidik</h3>
+    </div>
+  </div>
+
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Sri Utami, S.Pd, M.M </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19750202 200003 2 005</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">null</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Drs. Sri Hartono,Mm.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19660501 199802 1 003</li>
+      <li class="list-group-item">PKn</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Ninuk Setyawati, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19630730 200701 2 003</li>
+      <li class="list-group-item">Bahasa Indonesia</li>
+      <li class="list-group-item">Wali Kelas XII MM 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Yuswinarti, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19700103 200801 2 015</li>
+      <li class="list-group-item">PKK</li>
+      <li class="list-group-item">Wali Kelas XI TKR 4</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Muhyani, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19700722 200801 1 004</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Nircahyo Suko Widodo, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19721116 200604 1 005</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">null</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Muji Sumarni, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19750729 200701 2 009</li>
+      <li class="list-group-item">Bahasa Inggris</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Endang Sri Lestari, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19760417 201001 2 009</li>
+      <li class="list-group-item">Produktif MM</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Junedi Haryanto, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19760609 201001 1 013</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Sri Maria Yuniati, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19770607 200801 2 016</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Christin Sumarno, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19800921 200903 2 006</li>
+      <li class="list-group-item">IPAS</li>
+      <li class="list-group-item">Wali Kelas X TKJ 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Novie Herawati, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19841107 201001 2 026</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">Wali Kelas XI TKJ 5</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Drs. Hadi Waluyo </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19640525 200801 1 004</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Dariyah, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19781016 200604 2 006</li>
+      <li class="list-group-item">Matematika</li>
+      <li class="list-group-item">Wali Kelas XII TKR 5</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Totok Suriyanto, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19690413 200903 1 002</li>
+      <li class="list-group-item">BP/BK</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Suryawan Widi Hartono, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19740120 200903 1 002</li>
+      <li class="list-group-item">PJOK</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Edi Arbinto, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19740412 200903 1 004</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>P.Suryati, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19740714 200710 2 001</li>
+      <li class="list-group-item">PAI</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Askini Khairunnisa, S.Pd.I, M.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19800717 201001 2 017</li>
+      <li class="list-group-item">PAI</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Puji Hartiti, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19830319 201001 2 021</li>
+      <li class="list-group-item">Bahasa Inggris</li>
+      <li class="list-group-item">Wali Kelas XII TKJ 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Mugi Lestari, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19871002 201101 2 007</li>
+      <li class="list-group-item">IPAS</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Praja Achsani Winasmadi, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19860528 201402 1 002</li>
+      <li class="list-group-item">Matematika</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Berkah Destri Puspitasari, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19921212 202012 2 008</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Mery Sumiati, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19940307 202012 2 015</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Rasiman, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19670509 202221 1 001</li>
+      <li class="list-group-item">PKn</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Budi Sudarmono, ST </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19720318 202221 1 002</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">Wali Kelas XII TKR 5</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Mohamad Ahwan, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19731208 202221 1 004</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Tri Sumarni, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19750119 202221 2 003</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Puji Wahyono, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19760123 202221 1 001</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">Wali Kelas XII TKJ 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Sukasna, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19770407 202221 1 003</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Tofan Budi Ariyanto,S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19800218 202221 1 005</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">Wali Kelas XII TKJ 4</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Suhartono, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19810424 202221 1 007</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Amik Rosasi, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19810717 202221 2 020</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">Wali Kelas XI TKJ 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Tri Nastiti, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19820423 202221 2 019</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">Wali Kelas XII TKJ 5</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Yayan Aminudin, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19820720 202221 1 009</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Sukarno, S.Pd.Si.Gr </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19830124 202221 1 002</li>
+      <li class="list-group-item">IPAS</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Yuli Widayanti, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19830702 202221 2 012</li>
+      <li class="list-group-item">Bahasa Inggris</li>
+      <li class="list-group-item">Wali Kelas X ANIM 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Prihatno Sugeng N, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19831229 202221 1 006</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item"></li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Retno Budi Utami, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19840820 202221 2 026</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">Wali Kelas XI MM 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>R. Priyoadi Kusmono, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19851101 202221 1 013</li>
+      <li class="list-group-item">Matematika</li>
+      <li class="list-group-item">Wali Kelas X TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Fitrotul Hikmah, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19860205 202221 2 016</li>
+      <li class="list-group-item">IPAS</li>
+      <li class="list-group-item">Wali Kelas X TP 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Johan Cahyadi, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19860602 202221 1 009</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">Wali Kelas X TKR 3</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Syaein, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19870303 202221 1 008</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Harnita Dwi Afriyanti, S.Pd.Si </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19870404 202221 2 010</li>
+      <li class="list-group-item">Matematika</li>
+      <li class="list-group-item">Wali Kelas XI TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Heri Purnawan, S.Pd.Gr. </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19870612 202221 1 005</li>
+      <li class="list-group-item">BP/BK</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Hendrik Novtiana Widiyantoro, S.Pd.Gr. </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19871129 202221 1 002</li>
+      <li class="list-group-item">PJOK</li>
+      <li class="list-group-item">Wali Kelas X TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Fitriani, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19880518 202221 2 007</li>
+      <li class="list-group-item">Bahasa Indonesia</li>
+      <li class="list-group-item">Wali Kelas XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Retnaning Sekarini, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">1988052 2202221 2 015</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Lukman Rian Affandi, S,Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19890410 202221 1 011</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">Wali Kelas XII TKJ 3</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Slamet Rusdiyanto, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19890413 202221 1 010</li>
+      <li class="list-group-item">Bahasa Inggris</li>
+      <li class="list-group-item">Wali Kelas XII TKR 6</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Anjar Kustantoro, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19891026 202221 1 004</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">Wali Kelas XI TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Ilyas Ramdani, S.Pd.Gr. </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19900402 202221 1 005</li>
+      <li class="list-group-item">Matematika</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Emi Sukriani, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19900621 202221 2 014</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Muslimin, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19901126 202221 1 005</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">Wali Kelas XI TKR 5</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>M Shobri, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19911229 202221 1 004</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Meiariani Sintia Dewi, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19920503 202221 2 012</li>
+      <li class="list-group-item">Sejarah</li>
+      <li class="list-group-item">Wali Kelas XI TKJ 3</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Meli Triyani, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19930322 202221 2 017</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">Wali Kelas X TKJ 4</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Bimo Rahman Prasetyo, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19930614 202221 1 010</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">Wali Kelas XI TKJ 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Yuny Widiarti Putri, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19930628 202221 2 013</li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Fikri Ikhtiyaarullah, S.Kom </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19930801 202221 1 002</li>
+      <li class="list-group-item">MULTIMEDIA</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Inne Agustine Dwi Hastuti, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19930828 202221 2 011</li>
+      <li class="list-group-item">Bahasa Jawa</li>
+      <li class="list-group-item">Wali Kelas XI TKJ 4</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Silvia Wahyu Palupi, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19931001 202221 2 013</li>
+      <li class="list-group-item">Produktif TKJ</li>
+      <li class="list-group-item">Wali Kelas X TKJ 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Nendi Gusnianto, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19940801 202221 1 011</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">Wali Kelas X TKR 5</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Anggita Senja Ilhami, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19941117 202221 1 005</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">Wali Kelas X TKR 6</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Unik Nurul Asmi, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19950309 202221 2 007</li>
+      <li class="list-group-item">Sejarah</li>
+      <li class="list-group-item">Wali Kelas XI TP 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Zulfi Nur Hanifatulloh, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19950515 202221 1 008</li>
+      <li class="list-group-item">Produktif TP</li>
+      <li class="list-group-item">Wali Kelas XI TP 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Nanda Akbar Rastiana, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19950528 202221 1 006</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Septian Nugroho, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">19950915 202221 1 005</li>
+      <li class="list-group-item">Produktif MM</li>
+      <li class="list-group-item">Wali Kelas XI MM 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Munawir Syafii, S.Pd.I </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">PAI</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Supeni, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Bahasa Jawa</li>
+      <li class="list-group-item">Wali Kelas X ANIM 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Reny Widyarti, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Matematika</li>
+      <li class="list-group-item">Wali Kelas XII TP 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Mujiarto, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Produktif TKR</li>
+      <li class="list-group-item">Wali Kelas X TKR 6</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Ary Kusmawati, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">PKn</li>
+      <li class="list-group-item">Wali Kelas XII TP 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Lilis Sutiyani Rahayu, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">BP/BK</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Rafnida Octaviani, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Produktif TP</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Novita Felicia, S.Pd.Kom  </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Produktif MM</li>
+      <li class="list-group-item">Wali Kelas XII MM 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Gestiana Siwi Purwanti, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Bahasa Indonesia</li>
+      <li class="list-group-item">Wali Kelas X TP 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Luqman Hafidh Muiz, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Bahasa Inggris</li>
+      <li class="list-group-item">Wali Kelas X TKR 4</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Nur Oktaviana Ningrum, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">PJOK</li>
+      <li class="list-group-item">Wali Kelas X TKJ 3</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Peni Werdhi Elmina, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Produktif TP</li>
+      <li class="list-group-item">-</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Purbo Dwi Siswanto, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">Bahasa Inggris</li>
+      <li class="list-group-item">Wali Kelas XI TKR 3</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Desi Kriswahyuni, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">BAHASA INDONESIA</li>
+      <li class="list-group-item">Wali Kelas X TKJ 5</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Rizki Kurniawan, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">BAHASA JAWA</li>
+      <li class="list-group-item">Wali Kelas XII TKR 3</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>Zaenul Maruf, S.Pd </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">-</li>
+      <li class="list-group-item">PAI</li>
+      <li class="list-group-item">Wali Kelas XII TKR 1</li>
+    </ul>
+  </div>
+    
+</div>   
+
+</div><!-- akhir p-3 mt-3 -->
+
+
+   <!-- =========================================================== -->
+  
+
+<!-- Modal -->
+<!-- <div class="modal" id="informasi" tabindex="-1" style="display: none;">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2E86C1; color: white;">
+        <h5 class="modal-title" id="informasiLabel">Informasi Kelulusan</strong></h5>
+        <button type="button" id="tutup" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: white; color:  #2E86C1; padding: 30px;">
+
+      <h5 style="color: red;">Pengumuman Kelulusan Jumat, 5 Mei 2023<br>Mulai pukul 13.45 WIB</h5>
+      <h2>Klik <a href="http://viewun.smkn1binangun.sch.id/login.php">disini untuk melihat hasil</a></h2>      
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <div class="modal" id="informasi" tabindex="-1" style="display: none;">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2E86C1; color: white;">
+        <h5 class="modal-title" id="informasiLabel">Waktu-Waktu Penting Pendaftaran PPDB SMK 2022</strong></h5>
+        <button type="button" id="tutup" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: white; color:  #2E86C1; padding: 30px;">
+
+      <h2 style="color: red;">Pengumuman hasil akan dilaksanakan Senin, 4 Juli 2022 selambat-lambatnya pukul 23.55 WIB</h2>
+      <h2>Lihat di <a href="https://ppdb.jatengprov.go.id/">ppdb.jatengprov.go.id</a></h2>
+
+      <h1 style="color: red;">Setelah Verifikasi Berkas  Jangan Lupa:<br>  - Aktivasi Akun</h1>
+      <p>Bagi Calon Peserta Didik (CPD) yang telah melakukan VERIFIKASI BERKAS di SMKN 1 Binangun dan berminat mendaftar di SMKN 1 BINANGUN pada tahap memilih Sekolah di tanggal 29 juni s.d 1 juli 2022 di pastikan setelah MENDAFTAR/MEMILIH SEKOLAH sampai mencetak Bukti Pendaftaran karena sebagai syarat DAFTAR ULANG</p>
+      <p>Pada tahap Memilih Sekolah, SMKN 1 BINANGUN memfasilitasi bagi CPD yang mengalami kendala:<br>
+      1. sinyal susah,<br> 
+      2. tidak punya printer untuk cetak bukti Pendaftaran<br>
+      3. Bingung Proses Pemilihan Sekolah<br>
+      <br> Bagi yang berminat menggunakan fasilitas SMKN 1 BINANGUN silahkan gabung digrup WhatsApp di bawah ini (Jika Penuh Pilih Salah Satu)
+      <li>Group ke-1 <a href="https://chat.whatsapp.com/FxdDX9YaYdbJc6f49i5PaN"><img src="http://drive.google.com/uc?export=view&id=1fbDSzlNXd5mxjiu7oQj3AeK_HeUF3zmZ" height="40px"></a></li>
+      <li>Group ke-2 <a href="https://chat.whatsapp.com/CDUDN38SgG77qTf57giT0K"><img src="http://drive.google.com/uc?export=view&id=1fbDSzlNXd5mxjiu7oQj3AeK_HeUF3zmZ" height="40px"></a></li>
+      <li>Group ke-3 <a href="https://chat.whatsapp.com/JJaiocNhaaX2fmrj19jd4q"><img src="http://drive.google.com/uc?export=view&id=1fbDSzlNXd5mxjiu7oQj3AeK_HeUF3zmZ" height="40px"></a></li>
+      </p>
+      <br>  
+        <h3 style="color: red;">Cermati Waktu-waktu Penting Pendaftaran Berikut ini</h3>                                                                  
+        <li>Tgl. 15 Juni s.d 28 Juni 2022</li>
+        <ol>
+          <li style="text-align: justify;">Pembuatan akun
+            <ol style="margin-left: -38px;">Pembuatan akun pada website <a href="https://ppdb.jatengprov.go.id/">ppdb.jatengprov.go.id</a>. Pada saat pembuatan akun siapkan dokumen yang akan diupload, dokument tersebut yaitu:
+            <li style="margin-left: 15px;">Scan Pakta Integritas/Surat Pernyataan Kebenaran Dokumen download salah satu <a class="btn btn-danger" href="http://drive.google.com/uc?export=view&id=1cZXOH0coXf-kk6Q7mjGqCd9mZLkBqJWl" target="_blank">file Word</a> atau <a class="btn btn-primary" href="http://drive.google.com/uc?export=view&id=1JUAlepKWt8R8-TWyCWuwzDeJOBPXpatP" target="_blank">file PDF</a> </li>
+            <li style="margin-left: 15px;">Scan Kartu Keluarga</li>
+            <li style="margin-left: 15px;">Scan Surat Keterangan Nilai Raport</li>
+            </ol>
+            <ol style="margin-left: -38px; color: red;">SIAPKAN NO WHATSAPP AKTIF YG AKAN DIINPUT SAAT MEMBUAT AKUN</ol>
+            <ol style="margin-left: -38px; color: red;">Calon Peserta Didik (CPD) memastikan bukti ajuan akun sudah tercetak/Printout untuk ditunjukan saat verifikasi berkas.</ol>
+
+                     
+          </li>
+
+          <li style="text-align: justify;">Verifikasi Berkas
+            <ol style="margin-left: -38px;">Verifikasi berkasi dilakukan secara LURING/Datang langsung ke SMKN 1 BINANGUN, dengan membawa:
+            <li style="margin-left: 15px;">Buku Raport</li>
+            <li style="margin-left: 15px;">Surat Keterangan Nilai Raport semester I - V SMP/Sederajat yang diterbitkan oleh Satuan Pendidikan yg Bersangkutan</li>
+            <li style="margin-left: 15px;">Ijazah SMP/Sederajat atau surat yang berpenghargaan sama dengan ijazah SMP/sederajat</li>
+            <li style="margin-left: 15px;">Akta Kelahiran</li>
+            <li style="margin-left: 15px;">Kartu Keluarga</li>
+            <li style="margin-left: 15px;">Piagam Prestasi (jika memiliki)</li>
+            <li style="margin-left: 15px;">KIP/PIP (jika memiliki)</li>
+            </ol>
+            <ol style="margin-left: -38px; color: red;">Pastikan Setelah melakukan verifikasi berkas memperoleh PRINTOUT dari petugas verifikasi</ol>
+          </li>
+          <br>
+          <li style="text-align: justify;">Aktivasi Akun
+            <ol style="margin-left: -38px; ">Setelah Mendapatkan Bukti/Printout Verifikasi berkas dari SMKN Terdekat Selanjutnya CPD melakukan aktivasi akun yang dilakukan secara mandiri/online pada web yang sama pada saat membuat akun ppdb
+            </ol>
+            <ol style="margin-left: -38px; color: red;">Tips pada saat aktivasi akun ketika diminta passoword gunakan password yang mudah diingat, dan disarankan untuk mengisi email yang diminta agar ketika lupa password dapat melakukan reset password
+            </ol>
+
+            <h4 style="color: red;">VIDEO AKTIVASI AKUN</h4>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eqUuMyuMuF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+          </li>
+        </ol>
+
+        <li style="text-align: justify;">Tgl. 29 Juni s.d 1 Juli 2022</li>
+        <ol>
+          <li style="text-align: justify;">Pendaftaran/Pemilihan Sekolah
+            <ol style="margin-left: -38px;">Pada saat mendaftar/pemilihan sekolah siapkan surat pernyataan kesehatan bermaterai 10.000. <h5 style="color: red;">YANG DIMAKSUD SURAT PERNYATAAN KESEHATAN BUKANLAH SURAT YANG DIKELUARKAN OLEH DOKTER/RUMAHSAKIT/PUSKESMAS/KLINIK</h5>tetapi selembar dokumen yang dapat diisi sendiri dengan diketahui oleh orang tua. JADI tidak perlu kemana-mana dokument tersebut dapat di download diweb ini pilih salah satu link berikut untuk download <a class="btn btn-primary" href="http://drive.google.com/uc?export=view&id=1cfDs5GLVnRnqgC8XttRPTy4UK40Di-mM" target="_blank">File Word</a> atau  <a class="btn btn-danger" href="http://drive.google.com/uc?export=view&id=14HFnvUqf8etfZMRxfUpf41KW9USchfBK" target="_blank">File PDF</a>         
+            </ol>
+            <ol style="margin-left: -38px; color: red;">Pastikan Setelah melakukan PENDAFTARAN/PEMILIHAN SEKOLAH bukti pendaftaran di cetak disimpan sebagai bukti pendaftaran saat DAFTAR ULANG</ol>
+          </li>
+          <li style="text-align: justify;">CPD melakukan Perubahan Sekolah Pilihan (Apabila akan melakukan perubahan karena suatu hal)</li>
+        </ol>
+        <li>Lokasi SMK N 1 BINANGUN <a class="btn btn-primary" href="https://www.google.com/maps/place/SMK+Negeri+1+Binangun/@-7.664948,109.2020095,17z/data=!3m1!4b1!4m5!3m4!1s0x2e65682ba8430f85:0xc7f9f014630aa625!8m2!3d-7.6649532!4d109.2041944" target="_blank">KLIK DISINI</a></li> 
+
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <p>Kepada Calon Peserta didik yang belum mengajukan akun atau mengajukan akun tetapi datanya belum ada di database masih ada waktu satu hari yaitu hari <strong>sabtu, 19 Juni 2021</strong>. <br> Apabila mengalami kendala dalam pengajuan akun SMKN 1 Binangun melayani secara Online melalui nomor yang tertera di Informasi PPDB pada tautan di bawah dan <strong>layanan luring pada sabtu, 19 Juni 20121 pada pukul 09.00 WIB s.d 15.30 WIB</strong>. Terimakasih</p> -->
+
+<div class="" style="background-color: #0d47a1; color: white;">
+  <div class="pt-5 pb-5">
+       <h4 class="text-center">Web Resmi SMK N 1 BINANGUN</h4>
+  </div> 
+
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="white-text">Hubungi Kami</h4>
+        <p>
+        Jl. Lapangan, Rt.04 Rw.02, Desa Jati, Kec. Binangun, Kab. Cilacap, Jawa Tengah<br>
+        +62811 261 3264<br>
+        smkn1binangun@yahoo.co.id<br>
+        </p>
+        <a class="nav-rotate" href="https://www.instagram.com/smkn1binangun_jaya/" target="_blank" rel="noopener">
+          <img style="width:24px; margin-right:5px;" src="img/ig_icon.png"></a>
+        <a class="nav-rotate" href="https://www.facebook.com/SmkNegeri1Binangun" target="_blank" rel="noopener">
+          <img style="width:24px; margin-right:3px;" src="img/fb_icon.png"></a>
+        <a class="nav-rotate" href="https://www.youtube.com/@SMKN1Binangun" target="_blank" rel="noopener">
+            <img style="width:34px; margin-right:5px;" src="img/yt_icon.png"></a>
+      </div>
+      <div class="col-sm-6">
+        <h4 class="white-text">Links</h4>
+        <ul>
+          <li><a href="http://e-learning.smkn1binangun.sch.id">E-Learning</a></li>
+          <li><a href="https://www.uny.ac.id">Universitas Negeri Yogyakarta</a></li>
+          <li><a href="https://tkjbinangun.com/">SINAU Teknik Komputer Jaringan</a></li>
+          <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="card mt-4"><!-- AWAL CARD -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d506237.4356235205!2d109.02971639550776!3d-7.577159153091623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7f9f014630aa625!2sSMK+Negeri+1+Binangun!5e0!3m2!1sen!2sid!4v1535166637102" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div> <!-- AKHIR CARD -->
+
+  </div>
+
+    <div class="container">
+    © 2018-2020
+    </div>
+
+</div>
+
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#informasi").show();
+        $("#tutup").click(function(){
+          $("#informasi").hide();
+        });
+
+        
+              });
+
+      
+
+    </script>
+      </body>
+</html>

@@ -1,0 +1,1405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="sEp6zSMAfgWN7Vphqz58mWCaAtY4ZFxufJTXU9j2">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="custome.css">  
+
+    <!-- toastr -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> 
+
+
+    <title>Siswa-SMKN 1 BINANGUN</title>
+  <style type="text/css">
+    iframe, object, embed {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  </style>
+
+  </head>
+  <body>
+
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0d47a1">
+        <div class="container">            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuWeb" aria-controls="menuWeb" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><h3>SMKN 1 BINANGUN</h3></a>
+            <div class="collapse navbar-collapse justify-content-end" id="menuWeb">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropprofile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropprofile">
+                        <a class="dropdown-item" href="profile.html">Tentang Kami</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="visimisi.html">Visi & Misi</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="guru.html">Guru</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="tatausaha.html">TU</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="dropkesiswaan" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kesiswaaan
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropkesiswaan">
+                        <a class="dropdown-item" href="siswa.html">Siswa</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="prestasi.html">Prestasi</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="ekstra.html">Ekstrakurikuler</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="dropgalleri" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Gallery
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropgalleri">
+                        <a class="dropdown-item" href="galleri.html">Kegiatan Sekolah</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="fasilitas.html">Fasilitas Sekolah</a> 
+                    </li>           
+                    <!-- <a class="nav-link" href="contact.html">Contact</a>             -->
+                    <a class="nav-link" href="alumni.html">Alumni</a> 
+                    <a class="nav-link" href="absenonline.html">Absen</a> 
+                    <a class="nav-link" href="tanyappdb.html">QA PPDB</a>  
+                    <!-- <a class="nav-link" href="http://smkn1binangun.sch.id/login">Sign in</a>             -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="droplks" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        LKS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="droplks">
+                        <a class="dropdown-item" href="http://smkn1binangun.sch.id/lkstkroCilacap">TKRO</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="http://smkn1binangun.sch.id/lkstpCilacap">Pemesinan</a>
+                        </div>
+                    </li> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   <style type="text/css">
+#mobile{
+  display: none;
+}
+
+@media  only screen and (max-width: 600px) {
+  #web{
+    display: none;
+  }
+  #mobile{
+    display: block;
+  }
+  .table{
+    font-size: 12px !important;
+  }
+}
+  
+</style>
+
+<div class="container pt-5"></div>
+<div class="p-3 mt-3 ">
+  <div class="container">
+    <div id="web">
+
+      <div class="card">    
+        <div class="card-body">
+          <h3 class="card-title">Daftar Peserta Didik</h3>
+          <span id="cari" style="float: right; margin-top: -50px; font-size: 30px; cursor: pointer;"><i class="fa fa-search"></i></span>
+          
+
+          <div class="row" id="pencarian">
+            <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" >Key Word</span>
+                </div>
+                <input type="text" id="namain" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nama atau kelas">
+              </div>
+
+            </div>
+
+            <!-- <div class="col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="kelas">Kelas</label>
+                </div>
+                <select class="custom-select" id="kelas">
+                  <option selected>Semua</option>
+                                    <option>X TKR 1</option>                  
+                                    <option>X TKR 2</option>                  
+                                    <option>X TKR 3</option>                  
+                                    <option>X TKR 4</option>                  
+                                    <option>X TKR 5</option>                  
+                                    <option>X TKR 6</option>                  
+                                    <option>X TKJ 1</option>                  
+                                    <option>X TKJ 2</option>                  
+                                    <option>X TKJ 3</option>                  
+                                    <option>X TKJ 4</option>                  
+                                    <option>X TKJ 5</option>                  
+                                    <option>X TP 1</option>                  
+                                    <option>X TP 2</option>                  
+                                    <option>X ANIM 1</option>                  
+                                    <option>X ANIM 2</option>                  
+                                    <option>XI TKR 1</option>                  
+                                    <option>XI TKR 2</option>                  
+                                    <option>XI TKR 3</option>                  
+                                    <option>XI TKR 4</option>                  
+                                    <option>XI TKR 5</option>                  
+                                    <option>XI TKR 6</option>                  
+                                    <option>XI TKJ 1</option>                  
+                                    <option>XI TKJ 2</option>                  
+                                    <option>XI TKJ 3</option>                  
+                                    <option>XI TKJ 4</option>                  
+                                    <option>XI TKJ 5</option>                  
+                                    <option>XI TP 1</option>                  
+                                    <option>XI TP 2</option>                  
+                                    <option>XI MM 1</option>                  
+                                    <option>XI MM 2</option>                  
+                                    <option>XII TKR 1</option>                  
+                                    <option>XII TKR 2</option>                  
+                                    <option>XII TKR 3</option>                  
+                                    <option>XII TKR 4</option>                  
+                                    <option>XII TKR 5</option>                  
+                                    <option>XII TKR 6</option>                  
+                                    <option>XII TKJ 1</option>                  
+                                    <option>XII TKJ 2</option>                  
+                                    <option>XII TKJ 3</option>                  
+                                    <option>XII TKJ 4</option>                  
+                                    <option>XII TKJ 5</option>                  
+                                    <option>XII TP 1</option>                  
+                                    <option>XII TP 2</option>                  
+                                    <option>XII MM 1</option>                  
+                                    <option>XII MM 2</option>                  
+                                  </select>
+              </div>
+              
+            </div> -->
+          </div>
+
+          
+
+          
+          <table class="table">
+            <thead class="table-active text-light" style="background-color: #0d47a1">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">NIS</th>
+                <th scope="col">NAMA</th>
+                <th scope="col">JENIS KELAMIN</th>
+                <th scope="col">KELAS</th>
+              </tr>
+            </thead>
+            <tbody>
+                            <tr>
+                <td>1</td>
+                <td>203868</td>
+                <td>ABAS SUBEKTI</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>2</td>
+                <td>203869</td>
+                <td>ADI MUKTI NUGROHO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>3</td>
+                <td>203870</td>
+                <td>ADI SEPTIO TRI PAMUNGKAS</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>4</td>
+                <td>203871</td>
+                <td>ADITYA RIZAL RUSTIYANTO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>5</td>
+                <td>203872</td>
+                <td>AFIF HIDAYAT</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>6</td>
+                <td>203873</td>
+                <td>AFRIAN DWIARNANDA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>7</td>
+                <td>203874</td>
+                <td>AGIL DWI HIDAYAT</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>8</td>
+                <td>203875</td>
+                <td>AGNA GARA REVENDY</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>9</td>
+                <td>203876</td>
+                <td>AGUNG PRIHANTO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>10</td>
+                <td>203877</td>
+                <td>AHMAD NURUL MUBAROH</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>11</td>
+                <td>203878</td>
+                <td>AHMAD RIFAI</td>
+                <td>LAKI-LAKI</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>12</td>
+                <td>203879</td>
+                <td>AKROM ZUMARO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>13</td>
+                <td>203880</td>
+                <td>ALDI RIZKY ARDIANSYAH</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>14</td>
+                <td>203881</td>
+                <td>ALFIN RIZKI PANGESTU</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>15</td>
+                <td>203882</td>
+                <td>ALFYAN RAFIQI DZIKRILLAH BAHRI</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>16</td>
+                <td>203883</td>
+                <td>ALIEF RACHMAD HAKIM</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>17</td>
+                <td>203884</td>
+                <td>ALIEF WINDU IRAWAN</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>18</td>
+                <td>203885</td>
+                <td>ALIF FATKHUR ROHMAN</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>19</td>
+                <td>203886</td>
+                <td>ALVIN AGUS TRIANTO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>20</td>
+                <td>203887</td>
+                <td>ALVINO RAMADHANI SAPUTRA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>21</td>
+                <td>203888</td>
+                <td>AMIN NURROHMAN</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>22</td>
+                <td>203889</td>
+                <td>ANANDA RIZKY RAMADHAN</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>23</td>
+                <td>203890</td>
+                <td>ANDRIANO SAPUTRA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>24</td>
+                <td>203891</td>
+                <td>APRILIA</td>
+                <td>Perempuan</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>25</td>
+                <td>203892</td>
+                <td>AQILLA HAYTUL NAFIS</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>26</td>
+                <td>203893</td>
+                <td>ARDHY FADYLLAH SAHPUTRA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>27</td>
+                <td>203894</td>
+                <td>ARHADIAN AHLAF FAUZI</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>28</td>
+                <td>203895</td>
+                <td>ARIF BUDI PRASETYO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>29</td>
+                <td>203896</td>
+                <td>ARON AZIZ</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>30</td>
+                <td>203897</td>
+                <td>ARWA ATTA NUR SABILLA</td>
+                <td>Perempuan</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>31</td>
+                <td>203898</td>
+                <td>ARZETA FARIDA ROZKA</td>
+                <td>Perempuan</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>32</td>
+                <td>203900</td>
+                <td>AYU AMBARWATI</td>
+                <td>Perempuan</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>33</td>
+                <td>203901</td>
+                <td>AYUBY SASKARA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>34</td>
+                <td>203902</td>
+                <td>AZIZ WAHYU SAPUTRA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>35</td>
+                <td>203903</td>
+                <td>AZKA HANIF FAJURRAHMAN</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 1</td>
+              </tr>
+                            <tr>
+                <td>36</td>
+                <td>203904</td>
+                <td>AZWAR DAMAR RIDHO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>37</td>
+                <td>203905</td>
+                <td>BAGAS PUTRA RAMADAN</td>
+                <td>LAKI-LAKI</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>38</td>
+                <td>203906</td>
+                <td>BAGAS WARDANA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>39</td>
+                <td>203907</td>
+                <td>BENNY ERLANGGA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>40</td>
+                <td>203908</td>
+                <td>BRILLIANT SURO PUTRA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>41</td>
+                <td>203909</td>
+                <td>CALVIN ANDRE DWINATA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>42</td>
+                <td>203910</td>
+                <td>DANIEL FADILA PUTRA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>43</td>
+                <td>203911</td>
+                <td>DAVIT EKO PURNOMO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>44</td>
+                <td>203912</td>
+                <td>DEA ANGGI NOVITASARI</td>
+                <td>Perempuan</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>45</td>
+                <td>203913</td>
+                <td>DEBI BILKISTI</td>
+                <td>Perempuan</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>46</td>
+                <td>203914</td>
+                <td>DEKA EZA SULISTIO</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>47</td>
+                <td>203915</td>
+                <td>DENNY PANGESTU</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>48</td>
+                <td>203916</td>
+                <td>DERRYLEN FERNANDA</td>
+                <td>Laki-laki</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>49</td>
+                <td>203917</td>
+                <td>DESTI ISNAINNUR</td>
+                <td>Perempuan</td>
+                <td>XII TKR 2</td>
+              </tr>
+                            <tr>
+                <td>50</td>
+                <td>203918</td>
+                <td>DEWI ANJANI</td>
+                <td>Perempuan</td>
+                <td>XII TKR 2</td>
+              </tr>
+                        
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="linke" class="box-footer">
+        <ul class="pagination" role="navigation">
+        
+                    <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Previous">
+                <span class="page-link" aria-hidden="true">&lsaquo;</span>
+            </li>
+        
+        
+                    
+            
+            
+                                                                        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=2">2</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=3">3</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=4">4</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=5">5</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=6">6</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=7">7</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=8">8</a></li>
+                                                                    
+                            <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+            
+            
+                                
+            
+            
+                                                                        <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=32">32</a></li>
+                                                                                <li class="page-item"><a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=33">33</a></li>
+                                                        
+        
+                    <li class="page-item">
+                <a class="page-link" href="http://smkn1binangun.sch.id/siswa?page=2" rel="next" aria-label="Next &raquo;">&rsaquo;</a>
+            </li>
+            </ul>
+
+      </div>
+
+    </div>
+  </div><!-- akhir container -->
+
+<!-- <div id="mobile">
+
+  <div class="card text-danger text-center" style="background-color: #0d47a1">    
+    <div class="card-body">
+      <h3 class="card-title">Daftar Peserta Didik</h3>
+    </div>
+  </div>
+
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203868 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ABAS SUBEKTI</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203869 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ADI MUKTI NUGROHO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203870 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ADI SEPTIO TRI PAMUNGKAS</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203871 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ADITYA RIZAL RUSTIYANTO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203872 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AFIF HIDAYAT</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203873 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AFRIAN DWIARNANDA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203874 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AGIL DWI HIDAYAT</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203875 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AGNA GARA REVENDY</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203876 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AGUNG PRIHANTO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203877 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AHMAD NURUL MUBAROH</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203878 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AHMAD RIFAI</li>
+      <li class="list-group-item">LAKI-LAKI</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203879 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AKROM ZUMARO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203880 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALDI RIZKY ARDIANSYAH</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203881 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALFIN RIZKI PANGESTU</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203882 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALFYAN RAFIQI DZIKRILLAH BAHRI</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203883 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALIEF RACHMAD HAKIM</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203884 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALIEF WINDU IRAWAN</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203885 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALIF FATKHUR ROHMAN</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203886 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALVIN AGUS TRIANTO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203887 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ALVINO RAMADHANI SAPUTRA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203888 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AMIN NURROHMAN</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203889 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ANANDA RIZKY RAMADHAN</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203890 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ANDRIANO SAPUTRA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203891 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">APRILIA</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203892 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AQILLA HAYTUL NAFIS</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203893 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ARDHY FADYLLAH SAHPUTRA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203894 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ARHADIAN AHLAF FAUZI</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203895 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ARIF BUDI PRASETYO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203896 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ARON AZIZ</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203897 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ARWA ATTA NUR SABILLA</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203898 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">ARZETA FARIDA ROZKA</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203900 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AYU AMBARWATI</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203901 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AYUBY SASKARA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203902 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AZIZ WAHYU SAPUTRA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203903 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AZKA HANIF FAJURRAHMAN</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 1</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203904 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">AZWAR DAMAR RIDHO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203905 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">BAGAS PUTRA RAMADAN</li>
+      <li class="list-group-item">LAKI-LAKI</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203906 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">BAGAS WARDANA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203907 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">BENNY ERLANGGA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203908 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">BRILLIANT SURO PUTRA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203909 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">CALVIN ANDRE DWINATA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203910 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DANIEL FADILA PUTRA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203911 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DAVIT EKO PURNOMO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203912 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DEA ANGGI NOVITASARI</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203913 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DEBI BILKISTI</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203914 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DEKA EZA SULISTIO</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203915 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DENNY PANGESTU</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203916 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DERRYLEN FERNANDA</li>
+      <li class="list-group-item">Laki-laki</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203917 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DESTI ISNAINNUR</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    <div class="card mt-2 bg-info">
+    <div class="card-header">
+      <h4>203918 </h4>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">DEWI ANJANI</li>
+      <li class="list-group-item">Perempuan</li>
+      <li class="list-group-item">XII TKR 2</li>
+    </ul>
+  </div>
+    
+</div>  -->  
+
+</div><!-- akhir p-3 mt-3 -->
+
+
+   <!-- =========================================================== -->
+  
+
+<!-- Modal -->
+<!-- <div class="modal" id="informasi" tabindex="-1" style="display: none;">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2E86C1; color: white;">
+        <h5 class="modal-title" id="informasiLabel">Informasi Kelulusan</strong></h5>
+        <button type="button" id="tutup" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: white; color:  #2E86C1; padding: 30px;">
+
+      <h5 style="color: red;">Pengumuman Kelulusan Jumat, 5 Mei 2023<br>Mulai pukul 13.45 WIB</h5>
+      <h2>Klik <a href="http://viewun.smkn1binangun.sch.id/login.php">disini untuk melihat hasil</a></h2>      
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<!-- <div class="modal" id="informasi" tabindex="-1" style="display: none;">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #2E86C1; color: white;">
+        <h5 class="modal-title" id="informasiLabel">Waktu-Waktu Penting Pendaftaran PPDB SMK 2022</strong></h5>
+        <button type="button" id="tutup" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="background-color: white; color:  #2E86C1; padding: 30px;">
+
+      <h2 style="color: red;">Pengumuman hasil akan dilaksanakan Senin, 4 Juli 2022 selambat-lambatnya pukul 23.55 WIB</h2>
+      <h2>Lihat di <a href="https://ppdb.jatengprov.go.id/">ppdb.jatengprov.go.id</a></h2>
+
+      <h1 style="color: red;">Setelah Verifikasi Berkas  Jangan Lupa:<br>  - Aktivasi Akun</h1>
+      <p>Bagi Calon Peserta Didik (CPD) yang telah melakukan VERIFIKASI BERKAS di SMKN 1 Binangun dan berminat mendaftar di SMKN 1 BINANGUN pada tahap memilih Sekolah di tanggal 29 juni s.d 1 juli 2022 di pastikan setelah MENDAFTAR/MEMILIH SEKOLAH sampai mencetak Bukti Pendaftaran karena sebagai syarat DAFTAR ULANG</p>
+      <p>Pada tahap Memilih Sekolah, SMKN 1 BINANGUN memfasilitasi bagi CPD yang mengalami kendala:<br>
+      1. sinyal susah,<br> 
+      2. tidak punya printer untuk cetak bukti Pendaftaran<br>
+      3. Bingung Proses Pemilihan Sekolah<br>
+      <br> Bagi yang berminat menggunakan fasilitas SMKN 1 BINANGUN silahkan gabung digrup WhatsApp di bawah ini (Jika Penuh Pilih Salah Satu)
+      <li>Group ke-1 <a href="https://chat.whatsapp.com/FxdDX9YaYdbJc6f49i5PaN"><img src="http://drive.google.com/uc?export=view&id=1fbDSzlNXd5mxjiu7oQj3AeK_HeUF3zmZ" height="40px"></a></li>
+      <li>Group ke-2 <a href="https://chat.whatsapp.com/CDUDN38SgG77qTf57giT0K"><img src="http://drive.google.com/uc?export=view&id=1fbDSzlNXd5mxjiu7oQj3AeK_HeUF3zmZ" height="40px"></a></li>
+      <li>Group ke-3 <a href="https://chat.whatsapp.com/JJaiocNhaaX2fmrj19jd4q"><img src="http://drive.google.com/uc?export=view&id=1fbDSzlNXd5mxjiu7oQj3AeK_HeUF3zmZ" height="40px"></a></li>
+      </p>
+      <br>  
+        <h3 style="color: red;">Cermati Waktu-waktu Penting Pendaftaran Berikut ini</h3>                                                                  
+        <li>Tgl. 15 Juni s.d 28 Juni 2022</li>
+        <ol>
+          <li style="text-align: justify;">Pembuatan akun
+            <ol style="margin-left: -38px;">Pembuatan akun pada website <a href="https://ppdb.jatengprov.go.id/">ppdb.jatengprov.go.id</a>. Pada saat pembuatan akun siapkan dokumen yang akan diupload, dokument tersebut yaitu:
+            <li style="margin-left: 15px;">Scan Pakta Integritas/Surat Pernyataan Kebenaran Dokumen download salah satu <a class="btn btn-danger" href="http://drive.google.com/uc?export=view&id=1cZXOH0coXf-kk6Q7mjGqCd9mZLkBqJWl" target="_blank">file Word</a> atau <a class="btn btn-primary" href="http://drive.google.com/uc?export=view&id=1JUAlepKWt8R8-TWyCWuwzDeJOBPXpatP" target="_blank">file PDF</a> </li>
+            <li style="margin-left: 15px;">Scan Kartu Keluarga</li>
+            <li style="margin-left: 15px;">Scan Surat Keterangan Nilai Raport</li>
+            </ol>
+            <ol style="margin-left: -38px; color: red;">SIAPKAN NO WHATSAPP AKTIF YG AKAN DIINPUT SAAT MEMBUAT AKUN</ol>
+            <ol style="margin-left: -38px; color: red;">Calon Peserta Didik (CPD) memastikan bukti ajuan akun sudah tercetak/Printout untuk ditunjukan saat verifikasi berkas.</ol>
+
+                     
+          </li>
+
+          <li style="text-align: justify;">Verifikasi Berkas
+            <ol style="margin-left: -38px;">Verifikasi berkasi dilakukan secara LURING/Datang langsung ke SMKN 1 BINANGUN, dengan membawa:
+            <li style="margin-left: 15px;">Buku Raport</li>
+            <li style="margin-left: 15px;">Surat Keterangan Nilai Raport semester I - V SMP/Sederajat yang diterbitkan oleh Satuan Pendidikan yg Bersangkutan</li>
+            <li style="margin-left: 15px;">Ijazah SMP/Sederajat atau surat yang berpenghargaan sama dengan ijazah SMP/sederajat</li>
+            <li style="margin-left: 15px;">Akta Kelahiran</li>
+            <li style="margin-left: 15px;">Kartu Keluarga</li>
+            <li style="margin-left: 15px;">Piagam Prestasi (jika memiliki)</li>
+            <li style="margin-left: 15px;">KIP/PIP (jika memiliki)</li>
+            </ol>
+            <ol style="margin-left: -38px; color: red;">Pastikan Setelah melakukan verifikasi berkas memperoleh PRINTOUT dari petugas verifikasi</ol>
+          </li>
+          <br>
+          <li style="text-align: justify;">Aktivasi Akun
+            <ol style="margin-left: -38px; ">Setelah Mendapatkan Bukti/Printout Verifikasi berkas dari SMKN Terdekat Selanjutnya CPD melakukan aktivasi akun yang dilakukan secara mandiri/online pada web yang sama pada saat membuat akun ppdb
+            </ol>
+            <ol style="margin-left: -38px; color: red;">Tips pada saat aktivasi akun ketika diminta passoword gunakan password yang mudah diingat, dan disarankan untuk mengisi email yang diminta agar ketika lupa password dapat melakukan reset password
+            </ol>
+
+            <h4 style="color: red;">VIDEO AKTIVASI AKUN</h4>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eqUuMyuMuF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+          </li>
+        </ol>
+
+        <li style="text-align: justify;">Tgl. 29 Juni s.d 1 Juli 2022</li>
+        <ol>
+          <li style="text-align: justify;">Pendaftaran/Pemilihan Sekolah
+            <ol style="margin-left: -38px;">Pada saat mendaftar/pemilihan sekolah siapkan surat pernyataan kesehatan bermaterai 10.000. <h5 style="color: red;">YANG DIMAKSUD SURAT PERNYATAAN KESEHATAN BUKANLAH SURAT YANG DIKELUARKAN OLEH DOKTER/RUMAHSAKIT/PUSKESMAS/KLINIK</h5>tetapi selembar dokumen yang dapat diisi sendiri dengan diketahui oleh orang tua. JADI tidak perlu kemana-mana dokument tersebut dapat di download diweb ini pilih salah satu link berikut untuk download <a class="btn btn-primary" href="http://drive.google.com/uc?export=view&id=1cfDs5GLVnRnqgC8XttRPTy4UK40Di-mM" target="_blank">File Word</a> atau  <a class="btn btn-danger" href="http://drive.google.com/uc?export=view&id=14HFnvUqf8etfZMRxfUpf41KW9USchfBK" target="_blank">File PDF</a>         
+            </ol>
+            <ol style="margin-left: -38px; color: red;">Pastikan Setelah melakukan PENDAFTARAN/PEMILIHAN SEKOLAH bukti pendaftaran di cetak disimpan sebagai bukti pendaftaran saat DAFTAR ULANG</ol>
+          </li>
+          <li style="text-align: justify;">CPD melakukan Perubahan Sekolah Pilihan (Apabila akan melakukan perubahan karena suatu hal)</li>
+        </ol>
+        <li>Lokasi SMK N 1 BINANGUN <a class="btn btn-primary" href="https://www.google.com/maps/place/SMK+Negeri+1+Binangun/@-7.664948,109.2020095,17z/data=!3m1!4b1!4m5!3m4!1s0x2e65682ba8430f85:0xc7f9f014630aa625!8m2!3d-7.6649532!4d109.2041944" target="_blank">KLIK DISINI</a></li> 
+
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- <p>Kepada Calon Peserta didik yang belum mengajukan akun atau mengajukan akun tetapi datanya belum ada di database masih ada waktu satu hari yaitu hari <strong>sabtu, 19 Juni 2021</strong>. <br> Apabila mengalami kendala dalam pengajuan akun SMKN 1 Binangun melayani secara Online melalui nomor yang tertera di Informasi PPDB pada tautan di bawah dan <strong>layanan luring pada sabtu, 19 Juni 20121 pada pukul 09.00 WIB s.d 15.30 WIB</strong>. Terimakasih</p> -->
+
+<div class="" style="background-color: #0d47a1; color: white;">
+  <div class="pt-5 pb-5">
+       <h4 class="text-center">Web Resmi SMK N 1 BINANGUN</h4>
+  </div> 
+
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="white-text">Hubungi Kami</h4>
+        <p>
+        Jl. Lapangan, Rt.04 Rw.02, Desa Jati, Kec. Binangun, Kab. Cilacap, Jawa Tengah<br>
+        +62811 261 3264<br>
+        smkn1binangun@yahoo.co.id<br>
+        </p>
+        <a class="nav-rotate" href="https://www.instagram.com/smkn1binangun_jaya/" target="_blank" rel="noopener">
+          <img style="width:24px; margin-right:5px;" src="img/ig_icon.png"></a>
+        <a class="nav-rotate" href="https://www.facebook.com/SmkNegeri1Binangun" target="_blank" rel="noopener">
+          <img style="width:24px; margin-right:3px;" src="img/fb_icon.png"></a>
+        <a class="nav-rotate" href="https://www.youtube.com/@SMKN1Binangun" target="_blank" rel="noopener">
+            <img style="width:34px; margin-right:5px;" src="img/yt_icon.png"></a>
+      </div>
+      <div class="col-sm-6">
+        <h4 class="white-text">Links</h4>
+        <ul>
+          <li><a href="http://e-learning.smkn1binangun.sch.id">E-Learning</a></li>
+          <li><a href="https://www.uny.ac.id">Universitas Negeri Yogyakarta</a></li>
+          <li><a href="https://tkjbinangun.com/">SINAU Teknik Komputer Jaringan</a></li>
+          <!-- <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="card mt-4"><!-- AWAL CARD -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d506237.4356235205!2d109.02971639550776!3d-7.577159153091623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc7f9f014630aa625!2sSMK+Negeri+1+Binangun!5e0!3m2!1sen!2sid!4v1535166637102" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div> <!-- AKHIR CARD -->
+
+  </div>
+
+    <div class="container">
+    © 2018-2020
+    </div>
+
+</div>
+
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#informasi").show();
+        $("#tutup").click(function(){
+          $("#informasi").hide();
+        });
+
+        
+              });
+
+      
+
+    </script>
+    <script type="text/javascript" src="http://smkn1binangun.sch.id/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#pencarian").hide();
+
+    $("#cari").click(function(){
+      $("#pencarian").show();
+      $("#cari").hide();
+    });
+
+    $("#namain").keypress(function(event) {
+        var keycode = event.keyCode || event.which;
+        if(keycode == '13') {
+            var nama = $("#namain").val();
+            // var kelas = $("#kelas").val();
+            
+            // alert(nama);
+
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+              url: "http://smkn1binangun.sch.id/siswa/golet",
+              type: "POST",
+              data: "token=cek&nama=" + nama,
+              cache: false,
+              dataType:"json",
+              success: function(data){            
+
+                //isi = JSON.parse(data);
+                if(data.status == "Sukses"){
+                  //alert(data.pesan);
+                  $('tbody').html(data.pesan);
+                  $("#linke").hide();
+
+                }else if(data.status == "Gagal"){
+                  // alert(data.pesan);
+                  $('tbody').html(data.pesan);
+                  $("#linke").hide();
+
+                }
+                   
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) { // Ketika ada error
+                  alert(xhr.responseText);
+                  
+                    }         
+              
+            }); 
+        }
+    });
+
+    $("#kelas").change(function(){
+      var nama = $("#namain").val();
+      var kelas = $("#kelas").val();
+      
+      // alert(nama);
+
+      $.ajaxSetup({
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+      });
+      $.ajax({
+        url: "http://smkn1binangun.sch.id/siswa/golet",
+        type: "POST",
+        data: "token=cek&nama=" + nama + "&kelas=" + kelas,
+        cache: false,
+        dataType:"json",
+        success: function(data){            
+
+          //isi = JSON.parse(data);
+          if(data.status == "Sukses"){
+            //alert(data.pesan);
+            $('tbody').html(data.pesan);
+            $("#linke").hide();
+
+          }else if(data.status == "Gagal"){
+            // alert(data.pesan);
+            $('tbody').html(data.pesan);
+            $("#linke").hide();
+
+          }
+             
+
+          },
+          error: function (xhr, ajaxOptions, thrownError) { // Ketika ada error
+            alert(xhr.responseText);
+            
+              }         
+        
+      });
+    });
+  });
+</script>
+  </body>
+</html>
